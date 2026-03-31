@@ -24,7 +24,7 @@
 .the-detail {
   &__photos {
     @include page-grid;
-    
+
     margin-bottom: 16px;
   }
 
@@ -40,7 +40,7 @@
         grid-column: span 8;
       }
 
-      @include hover(transform, scale(1.1));
+      @include hover(transform, scale(1.05));
     }
 
     &--small {
@@ -59,11 +59,35 @@
     }
   }
 
+  &__app-badge {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    display: none;
+
+    @include on-tablet {
+      display: block;
+      bottom: 6px;
+      right: 0;
+      width: 77px;
+      height: 34px;
+    }
+
+    @include on-desktop {
+    bottom: 12px;
+    right: 0.4px;
+    width: 93px;
+    height: 37px;
+    pointer-events: none;
+    }
+  }
+
   &__photo {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform $effect-duration;
   }
 
   &__title {

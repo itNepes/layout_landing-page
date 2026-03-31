@@ -9,6 +9,12 @@
     />
     <title>Landing Page</title>
 
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon.png"
+    >
+
     <link rel="preconnect"
       href="https://fonts.googleapis.com"
     >
@@ -158,6 +164,11 @@
                       class="the-detail__photo"
                       src="categories/unlock-big.png"
                       alt="Auto Unlock"
+                      >
+                    <img
+                      class="the-detail__app-badge"
+                      src="categories/app-badge.png"
+                      alt="Auto Unlock App"
                     >
                   </a>
 
@@ -217,7 +228,7 @@
                       class="the-detail__photo"
                       src="categories/brakes-big.png"
                       alt="Hydraulic disc brakes & Lightweight"
-                    >
+                      >
                   </a>
 
                 </div>
@@ -243,19 +254,24 @@
                 <div class="contacts__form-wrapper">
                   <form
                     class="contacts__form form"
-                    onsubmit="this.reset(); return false;">
+                    onsubmit="this.reset(); return false;"
+                    autocomplete="off"
+                  >
                     <input
                       type="text"
                       class="form__input"
-                      placeholder="Name" required>
+                      placeholder="Name" required
+                      autocomplete="off">
                     <input
                       type="email"
                       class="form__input"
-                      placeholder="Email" required>
+                      placeholder="Email" required
+                      autocomplete="new-email">
                     <textarea
                       class="form__input
                       form__input--message"
                       placeholder="Message" required
+                      autocomplete="off"
                     ></textarea>
                     <button
                       type="submit"

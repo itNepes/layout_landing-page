@@ -14,6 +14,10 @@
     @include on-tablet {
       grid-column: 1 / 7;
     }
+
+    @include on-desktop {
+      grid-column: 1 / 8;
+    }
   }
 
   &__info-wrapper {
@@ -21,6 +25,10 @@
 
     @include on-tablet {
       grid-column: 8 / 13;
+    }
+
+    @include on-desktop {
+      grid-column: 10 / 13;
     }
   }
 

@@ -12,15 +12,18 @@
 
 @mixin content-padding-inline() {
   padding-inline: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
 
   @include on-tablet {
     padding-inline: 72px;
   }
 
   @include on-desktop {
-    margin-inline: auto;
-    max-width: 1020px;
     padding-inline: 120px;
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 

@@ -10,24 +10,47 @@
     align-items: center;
     gap: 20px;
     cursor: pointer;
+    position: static;
+
+    @include on-tablet {
+      position: relative;
+    }
 
     .header__phone-number {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      margin-top: 8px;
       opacity: 0;
       visibility: hidden;
-      transform: translateX(20px);
-      transition: all 0.4s ease-in-out;
-
+      pointer-events: none;
       color: $main-text-color;
       font-weight: 700;
       font-size: 16px;
       white-space: nowrap;
+      transform: translateY(-8px);
+      transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  
+      @include on-tablet {
+        left: auto;
+        right: 100%;
+        top: 50%;
+        margin-top: 0;
+        margin-right: 20px;
+        transform: translate(20px, -50%);
+      }
     }
 
     &:hover {
       .header__phone-number {
         opacity: 1;
         visibility: visible;
-        transform: translateX(0);
+        pointer-events: auto;
+        transform: translateY(0);
+
+        @include on-tablet {
+          transform: translate(0, -50%);
+        }
       }
     }
   }
